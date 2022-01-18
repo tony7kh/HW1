@@ -1,0 +1,26 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*:before,
+*::after{
+    box-sizing: inherit;
+}
+.list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: counter;;
+}
+.list li{
+
+    counter-increment: counter;
+}
+.list li::before{
+    content: counter(counter)".";
+    font-size: 18px;
+    font-family: bold;
+    color: red;
+    margin-right: 6px;
+
+}   
